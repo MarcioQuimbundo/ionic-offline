@@ -1,0 +1,78 @@
+ib-page-onboarding {
+
+}
+.onboarding {
+    height: calc(100% - 45px);
+    &__slide {
+        background-color: color($colors, light);
+        .slide-zoom {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 3;
+    }
+    &__img {
+        width: 128px;
+        height: 128px;
+    }
+    &__content {
+        flex: 3;
+        padding: 0 2rem;
+        p {
+            font-size: 1rem;
+            line-height: 24px;
+            letter-spacing: 1.7px;
+            width: 320px;
+        }
+    }
+    &__title {
+        color: color($colors, primary);
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .swiper-pagination-bullet {
+        background: color($colors, secondary);
+        border: 2px solid color($colors, primary);
+        opacity: 1;
+        z-index: 2;
+        position: relative;
+        &[data-slide-index="1"],  &[data-slide-index="2"]{
+            &:after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            right: 6px;
+            height: 2px;
+            width: 10px;
+            background: color($colors, secondary);
+            }
+        }
+    }
+    .swiper-pagination-bullet-active {
+        &[data-slide-index="1"] {
+            &:after {
+                background: color($colors, secondary);
+            }
+        }
+        &[data-slide-index="2"] {
+            &:after {
+                background: color($colors, secondary);
+            }
+        }
+    }
+    .swiper-pagination .swiper-pagination-bullet-active ~ .swiper-pagination-bullet {
+        background: color($colors, primary);
+        &:after {
+            background: color($colors, primary);
+        }
+    }
+}

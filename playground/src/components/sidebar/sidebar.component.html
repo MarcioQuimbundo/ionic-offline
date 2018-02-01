@@ -1,0 +1,29 @@
+
+<ion-header class="sidemenu__header"></ion-header>
+
+<ion-content class="sidemenu__content flex-content">
+    <div class="sidemenu__profile">
+    <div class="sidemenu__avatar circle shadow-3" [ngStyle]="{'background-image': 'url(' + photo + ')'}">
+    </div>
+        <div class="sidemenu__profilename"> {{ user?.name }} {{ user?.lastname }} <ion-badge color="secondary">{{ user?.jobPosition }}</ion-badge>
+    </div>
+    </div>
+    <div class="sidemenu__nav">
+        <div *ngFor="let nav of navList">
+            <div *ngIf="!nav.sub" class="sidemenu__nav__item" (click)="openPage(nav)" title="{{ nav.title }}">
+            <ion-icon [name]="nav.icon"></ion-icon>
+            <span class="nav-title" >{{ nav.title }}</span>
+            </div>
+            <div *ngIf="nav.sub" class="sidemenu__nav__item" (click)="openSubNav($event,nav)" title="{{ nav.title }}"><ion-icon [name]="nav.icon"></ion-icon><span class="nav-title" >{{ nav.title }}</span></div>
+            <div *ngIf="nav.open" class="sidemenu__subnav">
+                <div *ngFor="let subitem of nav.subitems" >
+                    <div class="sidemenu__subnav__item" (click)="openPage(subitem)"><i class="mdi mdi-{{ subitem.icon }}"></i>{{ subitem.title }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
+<ion-footer class="sidemenu__footer" (click)="logout()">
+    v0.1.0
+</ion-footer>
+

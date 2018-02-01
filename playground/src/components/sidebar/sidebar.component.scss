@@ -1,0 +1,72 @@
+.sidemenu {
+	&__content {
+		background: color($colors, primary);
+		color: color($colors, light);
+
+	}
+	&__profile {
+		background: darken(color($colors, primary), 5%);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		min-height: 200px;
+	}
+	&__profilename {
+		font-weight: 600;
+		margin-bottom: 1rem;
+		opacity: 0.7;
+	}
+
+	&__avatar {
+		margin: 3rem 0;
+		width: 90px;
+		height: 90px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		border: 2px solid color($colors, ternary );
+	}
+	&__nav {
+		padding: 1rem 0;
+		&__item {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			justify-content: center;
+			padding: 1rem 2rem;
+			color: color($colors, light) !important;
+			font-size: 14px;
+			border-left: 4px solid transparent;
+			ion-icon {
+				flex: 1;
+				font-size: 24px;
+				margin-right: 1rem;
+			}
+			span {
+				flex: 6;
+			}
+		}
+	}
+	&__subnav {
+
+		&__item {
+			display: flex;
+			align-items: center;
+			padding: .5rem .25rem .5rem 3rem;
+			color: color($colors, light);
+			font-size: 12px;
+			background-color: darken(color($colors, primary), 5%);
+			ion-icon {
+				font-size: 20px;
+				margin-right: 1rem;
+			}
+		}
+	}
+	&__footer {
+		padding: .5rem;
+		text-align: center;
+		background: darken(color($colors, primary), 2%);
+		color: lighten(color($colors, primary),10%);
+	}
+}

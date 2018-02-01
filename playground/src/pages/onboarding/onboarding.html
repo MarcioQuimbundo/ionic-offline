@@ -1,0 +1,29 @@
+<!--
+  Generated template for the OnboardingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content>
+    <ion-slides class="onboarding" pager="true">
+
+         <ion-slide class="onboarding__slide" *ngFor="let slide of onboardingSlides">
+            <div class="onboarding__header">
+                <div class="onboarding__img"
+                [ngStyle]="{ 'background': slide.img && 'url(' + slide.img + ')'}"></div>
+            </div>
+            <div class="onboarding__content">
+                <h3 class="onboarding__title">{{ slide.title }}</h3>
+                <p>{{ slide.msg }}</p>
+            </div>
+         </ion-slide>
+
+
+       </ion-slides>
+       <div class="footer footer-buttons">
+            <button ion-button
+            full
+            color="as-positive"
+            (click)="skip()">{{ 'SKIP' | translate }}</button>
+       </div>
+</ion-content>

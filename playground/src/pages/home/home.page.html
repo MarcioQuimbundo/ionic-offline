@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar color="as-negative">
+        <button menuToggle ion-button icon-only>
+            <ion-icon name="asicon-menu"></ion-icon>
+        </button>
+
+        <ion-title>{{ 'HOME' | translate }}</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="openOptions($event)">
+                <ion-icon name="more"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-card>
+        <img src="assets/img/wine.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+            The wine
+            </ion-card-title>
+
+        </ion-card-content>
+      </ion-card>
+</ion-content>

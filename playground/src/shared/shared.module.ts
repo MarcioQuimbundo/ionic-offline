@@ -11,6 +11,7 @@ import {
 import {
   TranslateHttpLoader
 } from '@ngx-translate/http-loader';
+import { IonicOfflineModule } from '../../../dist';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -21,6 +22,7 @@ export function createTranslateLoader(http: HttpClient) {
     CommonModule,
     FormsModule,
     HttpClientModule,
+    IonicOfflineModule,
     IonicStorageModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
@@ -35,7 +37,8 @@ export function createTranslateLoader(http: HttpClient) {
     FormsModule,
     TranslateModule,
     HttpClientModule,
-    IonicStorageModule
+    IonicStorageModule,
+    IonicOfflineModule
   ],
   declarations: [],
   providers: [

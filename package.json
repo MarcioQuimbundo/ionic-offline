@@ -71,5 +71,8 @@
   },
   "engines": {
     "node": ">=6.0.0"
+  },
+  "dependencies": {
+    "@ionic-native/network": "^4.5.3"
   }
 }
